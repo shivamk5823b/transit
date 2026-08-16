@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website work properly on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beastor Transit</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet Map CSS -->
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo">🚌 Beastor Transit</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Routes</a>
+            <a href="#">Live Tracking</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+
+    <!-- Main section -->
+    <main>
+
+        <!-- Hero section -->
+        <section class="hero">
+
+            <h1>Real-Time Public Transport Tracking</h1>
+
+            <p>
+                Find buses, check routes and track public transport
+                in real time.
+            </p>
+
+            <button id="trackBtn">
+                Track a Bus
+            </button>
+
+        </section>
+
+
+        <!-- Search section -->
+        <section class="search-section">
+
+            <h2>Find Your Bus</h2>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="fromInput"
+                    placeholder="From"
+                >
+
+                <input
+                    type="text"
+                    id="toInput"
+                    placeholder="To"
+                >
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Live tracking section -->
+        <section class="tracking-section">
+
+            <h2>🗺️ Live Bus Tracking</h2>
+
+            <!-- Map will be added later -->
+            <div id="map">
+                Map will appear here
+            </div>
+
+        </section>
+
+
+        <!-- Bus information -->
+        <section class="bus-section">
+
+            <h2>Available Buses</h2>
+
+            <div class="bus-container">
+
+                <div class="bus-card">
+
+                    <h3>🚌 Bus 101</h3>
+
+                    <p>
+                        Route: City Center → Railway Station
+                    </p>
+
+                    <p>
+                        Status: <span class="status">Active</span>
+                    </p>
+
+                    <p>
+                        ETA: 8 minutes
+                    </p>
+
+                    <button class="viewBtn">
+                        View Bus
+                    </button>
+
+                </div>
+
+
+                <div class="bus-card">
+
+                    <h3>🚌 Bus 102</h3>
+
+                    <p>
+                        Route: College → Bus Stand
+                    </p>
+
+                    <p>
+                        Status: <span class="status">Active</span>
+                    </p>
+
+                    <p>
+                        ETA: 12 minutes
+                    </p>
+
+                    <button class="viewBtn">
+                        View Bus
+                    </button>
+
+                </div>
+
+
+                <div class="bus-card">
+
+                    <h3>🚌 Bus 103</h3>
+
+                    <p>
+                        Route: Market → Railway Station
+                    </p>
+
+                    <p>
+                        Status: <span class="status">Active</span>
+                    </p>
+
+                    <p>
+                        ETA: 15 minutes
+                    </p>
+
+                    <button class="viewBtn">
+                        View Bus
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Beastor Transit | Smart Public Transport
+        </p>
+
+    </footer>
+    <!-- Leaflet Map JavaScript -->
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<!-- Our JavaScript -->
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>

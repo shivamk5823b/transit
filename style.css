@@ -1,0 +1,376 @@
+/* ================================
+   BASIC SETTINGS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 7%;
+
+    background: white;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1e40af
+    );
+
+    color: white;
+}
+
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+/* Hero button */
+
+.hero button {
+    padding: 14px 28px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: white;
+    color: #2563eb;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+}
+
+
+/* ================================
+   SEARCH SECTION
+================================ */
+
+.search-section {
+    padding: 60px 7%;
+    text-align: center;
+}
+
+.search-section h2 {
+    margin-bottom: 25px;
+}
+
+
+.search-box {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.search-box input {
+    width: 250px;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+
+.search-box button {
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #1e40af;
+}
+
+
+/* ================================
+   MAP SECTION
+================================ */
+
+.tracking-section {
+    padding: 40px 7%;
+}
+
+
+.tracking-section h2 {
+    margin-bottom: 20px;
+}
+
+
+/* Temporary map */
+
+#map {
+    height: 400px;
+
+    width: 100%;
+
+    background: #dfe5ec;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 20px;
+
+    color: #555;
+}
+
+
+/* ================================
+   BUS SECTION
+================================ */
+
+.bus-section {
+    padding: 60px 7%;
+}
+
+
+.bus-section h2 {
+    margin-bottom: 30px;
+}
+
+
+.bus-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+
+/* Bus card */
+
+.bus-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+
+.bus-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+.bus-card h3 {
+    margin-bottom: 15px;
+}
+
+
+.bus-card p {
+    margin-bottom: 10px;
+
+    color: #555;
+}
+
+
+/* Active status */
+
+.status {
+    color: green;
+
+    font-weight: bold;
+}
+
+
+/* View button */
+
+.viewBtn {
+    margin-top: 10px;
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.viewBtn:hover {
+    background: #1e40af;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    background: #111827;
+
+    color: white;
+
+    margin-top: 40px;
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+
+    .search-box {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .search-box input {
+        width: 100%;
+
+        max-width: 400px;
+    }
+
+
+    .search-box button {
+        width: 100%;
+
+        max-width: 400px;
+    }
+
+}
