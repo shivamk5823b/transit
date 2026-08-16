@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
-    <!-- Makes the website work properly on mobile -->
+    <!-- Mobile responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Website title -->
     <title>Beastor Transit</title>
 
-    <!-- Connect CSS file -->
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
     <!-- Leaflet Map CSS -->
-<link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-/>
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
 </head>
 
 <body>
 
-    <!-- Header / Navigation -->
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
     <header>
-        <div class="logo">🚌 Beastor Transit</div>
+
+        <div class="logo">
+            🚌 Beastor Transit
+        </div>
 
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Routes</a>
-            <a href="#">Live Tracking</a>
-            <a href="#">About</a>
+            <a href="#home">Home</a>
+            <a href="#routes">Routes</a>
+            <a href="#tracking">Live Tracking</a>
+            <a href="#about">About</a>
         </nav>
+
     </header>
 
 
-    <!-- Main section -->
+    <!-- ==============================
+         MAIN CONTENT
+    =============================== -->
+
     <main>
 
-        <!-- Hero section -->
-        <section class="hero">
+        <!-- HERO -->
 
-            <h1>Real-Time Public Transport Tracking</h1>
+        <section class="hero" id="home">
+
+            <h1>
+                Real-Time Public Transport Tracking
+            </h1>
 
             <p>
-                Find buses, check routes and track public transport
-                in real time.
+                Find buses, check routes and track public
+                transport in real time.
             </p>
 
             <button id="trackBtn">
@@ -52,10 +68,15 @@
         </section>
 
 
-        <!-- Search section -->
-        <section class="search-section">
+        <!-- ==============================
+             SEARCH
+        =============================== -->
 
-            <h2>Find Your Bus</h2>
+        <section class="search-section" id="routes">
+
+            <h2>
+                Find Your Bus
+            </h2>
 
             <div class="search-box">
 
@@ -80,12 +101,27 @@
         </section>
 
 
-        <!-- Live tracking section -->
-        <section class="tracking-section">
+        <!-- ==============================
+             LIVE TRACKING
+        =============================== -->
 
-            <h2>🗺️ Live Bus Tracking</h2>
+        <section
+            class="tracking-section"
+            id="tracking"
+        >
 
-            <!-- Map will be added later -->
+            <h2>
+                🗺️ Live Bus Tracking
+            </h2>
+
+            <!-- Driver location button -->
+
+            <button id="locationBtn">
+                📍 Get My Location
+            </button>
+
+            <!-- Map -->
+
             <div id="map">
                 Map will appear here
             </div>
@@ -93,23 +129,37 @@
         </section>
 
 
-        <!-- Bus information -->
+        <!-- ==============================
+             AVAILABLE BUSES
+        =============================== -->
+
         <section class="bus-section">
 
-            <h2>Available Buses</h2>
+            <h2>
+                Available Buses
+            </h2>
 
             <div class="bus-container">
 
+
+                <!-- BUS 101 -->
+
                 <div class="bus-card">
 
-                    <h3>🚌 Bus 101</h3>
+                    <h3>
+                        🚌 Bus 101
+                    </h3>
 
                     <p>
-                        Route: City Center → Railway Station
+                        Route:
+                        City Center → Railway Station
                     </p>
 
                     <p>
-                        Status: <span class="status">Active</span>
+                        Status:
+                        <span class="status">
+                            Active
+                        </span>
                     </p>
 
                     <p>
@@ -123,16 +173,24 @@
                 </div>
 
 
+                <!-- BUS 102 -->
+
                 <div class="bus-card">
 
-                    <h3>🚌 Bus 102</h3>
+                    <h3>
+                        🚌 Bus 102
+                    </h3>
 
                     <p>
-                        Route: College → Bus Stand
+                        Route:
+                        College → Bus Stand
                     </p>
 
                     <p>
-                        Status: <span class="status">Active</span>
+                        Status:
+                        <span class="status">
+                            Active
+                        </span>
                     </p>
 
                     <p>
@@ -146,16 +204,24 @@
                 </div>
 
 
+                <!-- BUS 103 -->
+
                 <div class="bus-card">
 
-                    <h3>🚌 Bus 103</h3>
+                    <h3>
+                        🚌 Bus 103
+                    </h3>
 
                     <p>
-                        Route: Market → Railway Station
+                        Route:
+                        Market → Railway Station
                     </p>
 
                     <p>
-                        Status: <span class="status">Active</span>
+                        Status:
+                        <span class="status">
+                            Active
+                        </span>
                     </p>
 
                     <p>
@@ -172,27 +238,60 @@
 
         </section>
 
+
+        <!-- ==============================
+             ABOUT
+        =============================== -->
+
+        <section id="about">
+
+            <h2>
+                About Beastor Transit
+            </h2>
+
+            <p>
+                Beastor Transit is a smart public transport
+                tracking platform designed to help passengers
+                find and track public transport vehicles.
+            </p>
+
+        </section>
+
     </main>
 
 
-    <!-- Footer -->
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
     <footer>
 
         <p>
-            © 2026 Beastor Transit | Smart Public Transport
+            © 2026 Beastor Transit
+        </p>
+
+        <p>
+            Smart Public Transport Tracking
         </p>
 
     </footer>
+
+
+    <!-- ==============================
+         JAVASCRIPT LIBRARIES
+    =============================== -->
+
     <!-- Leaflet Map JavaScript -->
-<script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
-</script>
 
-<!-- Our JavaScript -->
-<script src="script.js"></script>
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
 
 
+    <!-- Your JavaScript -->
 
+    <script src="./script.js"></script>
 
 </body>
+
 </html>

@@ -1,6 +1,6 @@
-/* ================================
+/* =========================================
    BASIC SETTINGS
-================================ */
+========================================= */
 
 * {
     margin: 0;
@@ -8,16 +8,21 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #f5f7fa;
     color: #222;
+    line-height: 1.6;
 }
 
 
-/* ================================
+/* =========================================
    HEADER
-================================ */
+========================================= */
 
 header {
     display: flex;
@@ -56,6 +61,8 @@ nav a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+
+    transition: 0.3s;
 }
 
 nav a:hover {
@@ -63,9 +70,9 @@ nav a:hover {
 }
 
 
-/* ================================
+/* =========================================
    HERO SECTION
-================================ */
+========================================= */
 
 .hero {
     text-align: center;
@@ -84,13 +91,17 @@ nav a:hover {
 
 .hero h1 {
     font-size: 48px;
+
     margin-bottom: 20px;
 }
 
 
 .hero p {
     font-size: 18px;
-    margin-bottom: 30px;
+
+    max-width: 650px;
+
+    margin: 0 auto 30px;
 }
 
 
@@ -100,15 +111,20 @@ nav a:hover {
     padding: 14px 28px;
 
     border: none;
+
     border-radius: 8px;
 
     background: white;
+
     color: #2563eb;
 
     font-size: 16px;
+
     font-weight: bold;
 
     cursor: pointer;
+
+    transition: 0.3s;
 }
 
 .hero button:hover {
@@ -116,14 +132,18 @@ nav a:hover {
 }
 
 
-/* ================================
+/* =========================================
    SEARCH SECTION
-================================ */
+========================================= */
 
 .search-section {
     padding: 60px 7%;
+
     text-align: center;
+
+    background: white;
 }
+
 
 .search-section h2 {
     margin-bottom: 25px;
@@ -151,6 +171,18 @@ nav a:hover {
     border-radius: 8px;
 
     font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+.search-box input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 
@@ -168,19 +200,24 @@ nav a:hover {
     font-weight: bold;
 
     cursor: pointer;
+
+    transition: 0.3s;
 }
+
 
 .search-box button:hover {
     background: #1e40af;
+
+    transform: translateY(-2px);
 }
 
 
-/* ================================
-   MAP SECTION
-================================ */
+/* =========================================
+   TRACKING SECTION
+========================================= */
 
 .tracking-section {
-    padding: 40px 7%;
+    padding: 60px 7%;
 }
 
 
@@ -189,35 +226,73 @@ nav a:hover {
 }
 
 
-/* Temporary map */
+/* Get Location button */
 
-#map {
-    height: 400px;
+#locationBtn {
+    padding: 12px 20px;
 
-    width: 100%;
+    margin-bottom: 20px;
 
-    background: #dfe5ec;
+    border: none;
 
-    border-radius: 15px;
+    border-radius: 8px;
 
-    display: flex;
+    background: #16a34a;
 
-    justify-content: center;
+    color: white;
 
-    align-items: center;
+    font-size: 15px;
 
-    font-size: 20px;
+    font-weight: bold;
 
-    color: #555;
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
 
-/* ================================
+#locationBtn:hover {
+    background: #15803d;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MAP
+========================================= */
+
+#map {
+    height: 450px;
+
+    width: 100%;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.12);
+
+    border: 1px solid #ddd;
+}
+
+
+/*
+   IMPORTANT:
+   Leaflet needs the map container
+   to have a fixed height.
+*/
+
+
+/* =========================================
    BUS SECTION
-================================ */
+========================================= */
 
 .bus-section {
     padding: 60px 7%;
+
+    background: white;
 }
 
 
@@ -244,6 +319,8 @@ nav a:hover {
     padding: 25px;
 
     border-radius: 15px;
+
+    border: 1px solid #eee;
 
     box-shadow:
         0 4px 15px rgba(0, 0, 0, 0.08);
@@ -275,7 +352,7 @@ nav a:hover {
 /* Active status */
 
 .status {
-    color: green;
+    color: #16a34a;
 
     font-weight: bold;
 }
@@ -297,16 +374,48 @@ nav a:hover {
     color: white;
 
     cursor: pointer;
+
+    transition: 0.3s;
 }
+
 
 .viewBtn:hover {
     background: #1e40af;
+
+    transform: translateY(-2px);
 }
 
 
-/* ================================
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+#about {
+    padding: 60px 7%;
+
+    text-align: center;
+
+    background: #f5f7fa;
+}
+
+
+#about h2 {
+    margin-bottom: 20px;
+}
+
+
+#about p {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #555;
+}
+
+
+/* =========================================
    FOOTER
-================================ */
+========================================= */
 
 footer {
     text-align: center;
@@ -316,23 +425,32 @@ footer {
     background: #111827;
 
     color: white;
-
-    margin-top: 40px;
 }
 
 
-/* ================================
+footer p {
+    margin: 5px;
+}
+
+
+/* =========================================
    MOBILE RESPONSIVE
-================================ */
+========================================= */
 
 @media (max-width: 768px) {
+
+    /* Header */
 
     header {
         flex-direction: column;
 
         gap: 15px;
+
+        padding: 15px 5%;
     }
 
+
+    /* Navigation */
 
     nav {
         gap: 15px;
@@ -343,15 +461,29 @@ footer {
     }
 
 
-    .hero h1 {
-        font-size: 34px;
+    nav a {
+        font-size: 14px;
     }
 
+
+    /* Hero */
 
     .hero {
         padding: 70px 20px;
     }
 
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+
+    .hero p {
+        font-size: 16px;
+    }
+
+
+    /* Search */
 
     .search-box {
         flex-direction: column;
@@ -368,6 +500,22 @@ footer {
 
 
     .search-box button {
+        width: 100%;
+
+        max-width: 400px;
+    }
+
+
+    /* Map */
+
+    #map {
+        height: 350px;
+    }
+
+
+    /* Location button */
+
+    #locationBtn {
         width: 100%;
 
         max-width: 400px;
